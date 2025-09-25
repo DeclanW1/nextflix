@@ -7,9 +7,9 @@ export default function Home() {
 
   return (
     <IntroSplash
-      durationMs={2400}       // how long it shows (in ms)
-      logoSrc={null}          // no logo for now
-      soundSrc={null}         // no sound for now
+      durationMs={2400}
+      logoSrc={null}
+      soundSrc={null}
       onFinish={() => router.push("/profile-page")}
       skipEnabled
     />
