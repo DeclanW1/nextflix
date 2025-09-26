@@ -13,7 +13,6 @@ export default function Header() {
           <Link
             href="/profile-page"
             className="relative block w-9 h-9"
-            aria-label="Profiles"
             title="Profiles">
             <Image
               src="/profile-pic/placeholder.png"
