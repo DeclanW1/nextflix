@@ -5,7 +5,7 @@ export function OwnerCard() {
     <ProfileBox
       name="The Owner"
       href="/profile-page/owner"
-      image="/profile-pic/placeholder.png"
+      image="/profile-pic/owner.png"
     />
   );
 }

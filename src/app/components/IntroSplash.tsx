@@ -22,7 +22,7 @@ export default function IntroSplash({
   useEffect(() => {
     const t = window.setTimeout(() => {
       setShow(false);
-      window.setTimeout(() => onFinish?.(), 300); // allow fade-out
+      window.setTimeout(() => onFinish?.(), 300);
     }, durationMs);
     return () => window.clearTimeout(t);
   }, [durationMs, onFinish]);

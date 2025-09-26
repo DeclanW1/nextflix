@@ -5,7 +5,7 @@ export function NoseyCard() {
     <ProfileBox
       name="Someone Nosey"
       href="/profile-page/nosey"
-      image="/profile-pic/placeholder.png"
+      image="/profile-pic/nosey.png"
     />
   );
 }
