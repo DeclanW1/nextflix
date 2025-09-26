@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { RecruiterCard } from "./recruiter/card";
 import { NoseyCard } from "./nosey/card";
 import { OwnerCard } from "./owner/card";
@@ -12,12 +11,14 @@ export default function ProfileLandingPage() {
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
         <li>
-          <Link href="/main-page">
-            <RecruiterCard />
-          </Link>
+          <RecruiterCard />
         </li>
-        <li><NoseyCard /></li>
-        <li><OwnerCard /></li>
+        <li>
+          <NoseyCard />
+        </li>
+        <li>
+          <OwnerCard />
+        </li>
       </ul>
     </main>
   );

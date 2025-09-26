@@ -15,8 +15,8 @@ export default function ProfileBox({
     <div className="text-center">
       <Link
         href={href}
-        className="group block border-4 border-white/60 hover:border-white transition">
-        <div className="relative mx-auto h-64 w-64 overflow-hidden"> 
+        className="group block border-4 border-white hover:border-white transition">
+        <div className="relative mx-auto h-64 w-64 overflow-hidden">
           <Image
             src={image}
             alt={name}
@@ -25,9 +25,8 @@ export default function ProfileBox({
             sizes="256px"
           />
         </div>
+        <div className="mt-4 text-2xl font-semibold">{name}</div>
       </Link>
-      <div className="mt-4 text-2xl font-semibold">{name}</div>
     </div>
   );
 }
-
