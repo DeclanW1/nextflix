@@ -1,27 +1,34 @@
-"use client";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 bg-black/70 backdrop-blur supports-[backdrop-filter]:bg-black/50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 flex items-center">
-        <div className="ml-auto flex items-center gap-3">
-          <span className="text-sm sm:text-base font-medium text-white/80">
-            Declan&apos;s portfolio
-          </span>
-          <Link
-            href="/profile-page"
-            className="relative block w-9 h-9"
-            title="Profiles">
-            <Image
-              src="/profile-pic/placeholder.png"
-              alt="Your profile"
-              fill
-              sizes="36px"
-              className="object-cover rounded-full border border-white/20"
-              priority
-            />
+    <header className="sticky top-0 z-10 border-b border-white/10 bg-[#0b0f26]/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+        
+        {/* Left side- title */}
+        <div className="text-lg md:text-xl font-semibold tracking-wide">
+          Declan Portfolio
+        </div>
+
+        {/* Right side- home + profile pic */}
+        <div className="flex items-center gap-4">
+          <Link 
+            href="/main-page" 
+            className="text-sm md:text-base opacity-80 hover:opacity-100">
+            Home
+          </Link>
+
+          <Link href="/profile-page" className="block">
+            <div className="h-9 w-9 rounded-full overflow-hidden border border-white/20 hover:border-white/50 transition">
+              <Image
+                src=""  
+                alt="Profile"
+                width={36}
+                height={36}
+                className="object-cover"
+              />
+            </div>
           </Link>
         </div>
       </div>

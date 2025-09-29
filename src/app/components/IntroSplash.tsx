@@ -43,13 +43,11 @@ export default function IntroSplash({
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white"
           role="dialog"
           aria-label="Intro animation">
-          {/* Background */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-80" />
             <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-white/5" />
           </div>
 
-          {/* Wordmark only (no logo/audio) */}
           <motion.div
             className="relative mt-2 flex items-center gap-2 font-semibold tracking-[0.25em] text-xl sm:text-2xl"
             initial="hidden"
