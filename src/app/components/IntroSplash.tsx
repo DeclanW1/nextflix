@@ -8,6 +8,8 @@ type Props = {
   skipEnabled?: boolean;
   titleLeft?: string;   // text on the left
   titleRight?: string;  // text on the right
+  logoSrc?: string | null;
+  soundSrc?: string | null;
 };
 
 export default function IntroSplash({

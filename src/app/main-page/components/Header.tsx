@@ -8,7 +8,7 @@ export default function Header() {
         
         {/* Left side- title */}
         <div className="text-lg md:text-xl font-semibold tracking-wide">
-          Declan's Portfolio
+          Declan&apos;s Portfolio
         </div>
 
         {/* Right side- home + profile pic */}
