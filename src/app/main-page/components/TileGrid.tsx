@@ -3,7 +3,7 @@ import TileBase from "./TileBase";
 export default function TileGrid() {
   return (
     <div
-      className="grid gap-4 grid-cols-1 md:grid-cols-3auto-rows-[14rem]">
+      className="grid gap-4 grid-cols-1 md:grid-cols-3 auto-rows-[14rem]">
 
       <div className="md:col-span-2 md:row-span-2 [&>*]:h-full">
         <TileBase title="CV" href="/cv" image="/icons/cv.png" />
