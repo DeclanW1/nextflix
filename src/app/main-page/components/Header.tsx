@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 border-b border-white/10 bg-[#0b0f26]/90 backdrop-blur">
+    <header className="sticky top-0 z-10 border-b border-white/20 bg-black backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         
         {/* Left side- title */}
         <div className="text-lg md:text-xl font-semibold tracking-wide">
-          Declan Portfolio
+          Declan's Portfolio
         </div>
 
         {/* Right side- home + profile pic */}
