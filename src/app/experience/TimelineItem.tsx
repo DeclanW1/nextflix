@@ -1,3 +1,5 @@
+import type { Experience } from "./data";
+
 export default function TimelineItem({
   item,
   index,
