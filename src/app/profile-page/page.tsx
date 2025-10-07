@@ -4,7 +4,10 @@ import { OwnerCard } from "./owner/card";
 
 export default function ProfileLandingPage() {
   return (
-    <main className="min-h-screen bg-[#0b0f26] text-white flex flex-col items-center justify-center">
+    <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0a0f2c] via-[#0b122e] to-[#050817] text-white flex flex-col items-center justify-center">
+      <div className="pointer-events-none absolute -top-20 -left-20 w-[620px] h-[620px] bg-purple-600/15 blur-[180px] rounded-full" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 w-[620px] h-[620px] bg-blue-500/15 blur-[180px] rounded-full" />
+
       <h1 className="text-center text-3xl md:text-5xl font-semibold mb-12">
         Who&apos;s viewing?
       </h1>
