@@ -8,6 +8,8 @@ type Props = {
   titleLeft?: string;
   titleRight?: string;
   soundSrc?: string | null;
+  logoSrc?: string | null;
+  durationMs?: number;
 };
 
 export default function IntroSplash({
@@ -16,13 +18,14 @@ export default function IntroSplash({
   titleLeft = "Declan’s",
   titleRight = "Portfolio",
   soundSrc = "/sounds/intro.mp3",
+  durationMs,
 }: Props) {
   const [show, setShow] = useState(true);
 
   // timing
   const soundDelayMs = 200;      // 0.2s delay
   const soundLengthMs = 3250;    // 3.25s sound
-  const totalDurationMs = soundDelayMs + soundLengthMs; // 3450ms
+  const totalDurationMs = durationMs ?? (soundDelayMs + soundLengthMs); // 3450ms
 
   // splash
   useEffect(() => {
