@@ -23,8 +23,7 @@ export default function Home() {
           className="fixed inset-0 z-[9998] flex flex-col items-center justify-center select-none text-center"
           onPointerDown={() => setGateDone(true)}
           onKeyDown={() => setGateDone(true)}
-          tabIndex={0}
-        >
+          tabIndex={0}>
           <div className="text-4xl sm:text-5xl font-semibold tracking-widest text-white/90">
             Declan’s <span className="text-blue-400">Portfolio</span>
           </div>
