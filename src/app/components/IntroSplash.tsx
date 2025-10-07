@@ -81,7 +81,8 @@ export default function IntroSplash({
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center text-white">
+          className="fixed inset-0 z-[9999] flex items-center justify-center text-white
+                     pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] px-4">
           {/* theme backdrop */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2c] via-[#0b122e] to-[#050817]" />
           {/* soft glow */}
@@ -90,51 +91,62 @@ export default function IntroSplash({
           {/* fade */}
           <div className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-white/5" />
 
-          {/* title annimated */}
-          <motion.div
-            className="relative mt-2 flex items-center gap-3 font-semibold tracking-[0.22em] text-2xl sm:text-3xl"
-            initial="hidden"
-            animate="show"
-            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}>
-            {Array.from(titleLeft).map((ch, i) => (
+          {/* overflow guard */}
+          <div className="relative w-full overflow-hidden">
+            {/* stacked on mobile, inline on larger screens */}
+            <motion.div
+              className="relative mt-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3
+                         font-semibold tracking-[0.22em] text-4xl sm:text-5xl md:text-6xl
+                         mx-auto max-w-[min(92vw,900px)] text-center"
+              initial="hidden"
+              animate="show"
+              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}>
+              {/* Declan’s */}
+              <motion.div className="flex justify-center sm:justify-end flex-wrap">
+                {Array.from(titleLeft).map((ch, i) => (
+                  <motion.span
+                    key={`l${i}`}
+                    className="inline-block text-white/90"
+                    variants={{
+                      hidden: { y: 20, opacity: 0 },
+                      show: { y: 0, opacity: 1, transition: { duration: 0.35, ease: "easeOut" } },
+                    }}>
+                    {ch}
+                  </motion.span>
+                ))}
+              </motion.div>
+
+              {/* Dot (hidden on stacked layout) */}
               <motion.span
-                key={`l${i}`}
-                className="inline-block text-white/90"
+                className="hidden sm:inline-block"
                 variants={{
                   hidden: { y: 20, opacity: 0 },
-                  show: { y: 0, opacity: 1, transition: { duration: 0.35, ease: "easeOut" } },
+                  show: { y: 0, opacity: 1, transition: { duration: 0.35 } },
                 }}>
-                {ch}
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white/70">
+                  <span className="absolute inset-0 rounded-full blur-[6px] bg-blue-400/50" />
+                </span>
               </motion.span>
-            ))}
 
-            {/* Dot with glow effect */}
-            <motion.span
-              className="inline-block"
-              variants={{
-                hidden: { y: 20, opacity: 0 },
-                show: { y: 0, opacity: 1, transition: { duration: 0.35 } },
-              }}>
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white/70">
-                <span className="absolute inset-0 rounded-full blur-[6px] bg-blue-400/50" />
-              </span>
-            </motion.span>
-
-            {Array.from(titleRight).map((ch, i) => (
-              <motion.span
-                key={`r${i}`}
-                className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-purple-400"
-                variants={{
-                  hidden: { y: 20, opacity: 0 },
-                  show: { y: 0, opacity: 1, transition: { duration: 0.35, ease: "easeOut" } },
-                }}>
-                {ch}
-              </motion.span>
-            ))}
-          </motion.div>
+              {/* Portfolio */}
+              <motion.div className="flex justify-center sm:justify-start flex-wrap bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-purple-400">
+                {Array.from(titleRight).map((ch, i) => (
+                  <motion.span
+                    key={`r${i}`}
+                    className="inline-block"
+                    variants={{
+                      hidden: { y: 20, opacity: 0 },
+                      show: { y: 0, opacity: 1, transition: { duration: 0.35, ease: "easeOut" } },
+                    }}>
+                    {ch}
+                  </motion.span>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
 
           {/* underline glow */}
-          <div className="absolute top-[55%] h-px w-[38%] max-w-[520px] bg-white/10">
+          <div className="absolute top-[60%] sm:top-[55%] h-px w-[70%] sm:w-[38%] max-w-[520px] bg-white/10">
             <div className="h-px w-[45%] bg-gradient-to-r from-blue-400/70 via-blue-300/40 to-transparent blur-[1px]" />
           </div>
 
