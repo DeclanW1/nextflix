@@ -6,23 +6,26 @@ export default function TileBase({
   href,
   image,
   caption,
+  target,
 }: {
   title: string;
   href: string;
   image?: string;
   caption?: string;
+  target?: "_blank";
 }) {
   return (
     <Link
       href={href}
+      target={target}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={[
         "group relative flex h-36 w-full items-center justify-center",
         "rounded-none border border-white/25 overflow-hidden",
         "outline-none focus-visible:ring-2 focus-visible:ring-white/40",
-        "transition"
-      ].join(" ")}>
-
-      {/* Background image */}
+        "transition",
+      ].join(" ")}
+    >
       {image && (
         <Image
           src={image}
@@ -33,11 +36,9 @@ export default function TileBase({
           priority={title === "CV"}
         />
       )}
-      
-        {/* Dark overlay */}
+
       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
 
-      {/* Title + optional caption */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="text-lg md:text-xl font-medium text-white drop-shadow">
           {title}
