@@ -10,30 +10,30 @@ export type Experience = {
 export const EXPERIENCES: Experience[] = [
   {
     id: "exp-1",
-    title: "Junior Full-Stack Developer",
-    company: "Big Thinking",
-    start: "September 2024",
-    end: "September 2025",
+    title: "Software Developer",
+    company: "Freelance/Contract",
+    start: "October 2025",
+    end: "Current",
     summary:
-      "Put description here",
+      "",
   },
   {
     id: "exp-2",
-    title: "Sales Executive",
-    company: "David Hayton - Motor Trade",
-    start: "January 2023",
-    end: "July 2024",
+    title: "Junior Software Developer",
+    company: "BigThinkingltd",
+    start: "July 2024",
+    end: "October 2025",
     summary:
-      "Put description here",
+      "",
   },
   {
     id: "exp-3",
-    title: "TBC",
-    company: "TBC",
-    start: "TBC",
-    end: "TBC",
+    title: "Sales Executive",
+    company: "David Hayton",
+    start: "January 2023",
+    end: "July 2024",
     summary:
-      "Put description here",
+      "",
   },
 ];
 

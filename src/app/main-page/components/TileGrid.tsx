@@ -22,6 +22,9 @@ export default function TileGrid() {
       <div className="[&>*]:h-full [&>*]:aspect-auto">
         <TileBase title="Experience" href="/experience" image="/icons/experience.png" />
       </div>
+      <div className="[&>*]:h-full [&>*]:aspect-auto">
+        <TileBase title="GitHub" href="https://github.com/DeclanW1" image="/icons/github.png" target="_blank" />
+      </div>
     </div>
   );
 }
