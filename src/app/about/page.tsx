@@ -3,10 +3,8 @@ import Header from "../main-page/components/Header";
 export default function AboutPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0a0f2c] via-[#0b122e] to-[#050817] text-white">
-      {/* Background glows */}
       <div className="pointer-events-none absolute -top-20 -left-20 w-[620px] h-[620px] bg-purple-600/15 blur-[180px] rounded-full" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 w-[620px] h-[620px] bg-blue-500/15 blur-[180px] rounded-full" />
-
       <Header />
 
       <section className="mx-auto max-w-3xl p-6 md:p-10 space-y-6">
@@ -36,11 +34,26 @@ export default function AboutPage() {
         </p>
 
         <p className="opacity-80 leading-relaxed">
-          One area I care about a lot is authentication and access control.
-          These systems are easy to rush and hard to fix later. I enjoy taking
-          the time to get them right, making sure users end up in the right
-          place and that edge cases are handled cleanly without making the
-          experience feel heavy.
+          A good example of how I approach frontend work is a small website I
+          built as part of a take-home task for a software development interview.
+          The focus was on clean structure, sensible styling, and a responsive
+          layout rather than complex functionality. You can view the project{" "}
+          <a
+            href="https://main.d3lpkr7uoldiij.amplifyapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 hover:opacity-100"
+          >
+            here
+          </a>
+          .
+        </p>
+
+        <p className="opacity-80 leading-relaxed">
+          I also have experience implementing authentication and access control,
+          working with user roles, redirects, and edge cases to ensure users end
+          up in the right place and the overall experience remains clear and
+          predictable.
         </p>
 
         <p className="opacity-80 leading-relaxed">
